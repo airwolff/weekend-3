@@ -27,6 +27,7 @@ function addNum(event) {
 		mathNum[element.name] = element.value;
 	});
 	mathNum.symbol = symbol;
+$('form').find('input').val('');
 
 	$.ajax({
 		type: 'POST',
@@ -46,7 +47,7 @@ function getAnswer(response) {
 } // end of getAnswer function
 
 function clear() {
-	$('form').find('input[type=text]').val('');
+	$('form').find('input').val('');
 	$('#answer').html('');
 
 }
